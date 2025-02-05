@@ -13,8 +13,15 @@ foreach($controllers_files as $file){
     if($file == '.' || $file == '..'){
         continue;
     }
-    echo $file;
 require_once './controllers/' . $file;
 }
 
 
+$models_files = scandir('./models');
+
+foreach($models_files as $file){
+    if($file == '.' || $file == '..'){
+        continue;
+    }
+require_once './models/' . $file;
+}

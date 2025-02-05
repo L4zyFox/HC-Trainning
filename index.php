@@ -8,4 +8,27 @@
 
 require_once 'autoload.php';
 
-//echo $saudacao;
+// Criando uma controladora de rotas improvisada - Não é boa prática
+$route = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
+
+switch($route){
+    case '/':
+        $auth = new AuthController();
+        if($auth->checkAuth()){
+            echo "Você está logado!";
+        }else{
+            header('Location: /login');
+        }
+        break;
+    case '/login':
+        if($method == 'POST'){
+            echo "fazer Login!";
+        }elseif($method == 'GET'){
+            $controller = new ViewController();
+            $controller->render('login');
+        }else{
+            echo "Method Not Allowed!!!";
+        }
+        break;
+}
