@@ -31,4 +31,13 @@ switch($route){
             echo "Method Not Allowed!!!";
         }
         break;
+    case '/register':
+        if($method == 'POST'){
+            echo "fazer Cadastro!";
+        }elseif($method == 'GET'){
+            $controller = new ViewController();
+            $controller->render('register');
+        }else{
+            echo "Method Not Allowed!!!";
+        }
 }
