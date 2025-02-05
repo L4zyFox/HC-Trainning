@@ -1,0 +1,23 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.login_form {
+    background: #ececec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+.register_form {
+    background: #fde4e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}

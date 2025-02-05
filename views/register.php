@@ -1,31 +1,21 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Simples</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
-        }
-    </style>
+    <link href="/Assets/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo!</h1>
-        <p>Esta é uma página de Cadastro!!</p>
+        <div class="register_form">
+            <h1>Página de Registro!!</h1>
+            <p>Insira seus dados!</p>
+            <input name="username" type="text" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
+                <button id="register-btn">Registrar</button><br><br>
+            <a href="/login">Página de login</a>
+        </div>
     </div>
+    <script src="/Assets/register.js"></script>
 </body>
 </html>
