@@ -23,12 +23,22 @@ switch($route){
         break;
     case '/login':
         if($method == 'POST'){
-            echo "fazer Login!";
+            $request = file_get_contents('php://input');
+            $data_obj = json_decode($request);
+        //    $userLogado = $data_obj->username;
+        //    echo 'Seja bem-vindo ' . $userLogado;
+            $result = $auth->login($data_obj->username, $data_obj->password);
+            echo $result;
+
         }elseif($method == 'GET'){
             $controller = new ViewController();
             $controller->render('login');
+
+
         }else{
             echo "Method Not Allowed!!!";
+
+
         }
         break;
     case '/register':
