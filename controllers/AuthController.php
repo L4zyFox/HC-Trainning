@@ -8,11 +8,12 @@ class AuthController {
 
     public function login($username, $password){
 
-        if($username == 'admin' && $password == 'Password!123'){
-            return true;
-        }else{
-            return false;
-        }
+    //    Login feito dessa forma está suscetível a type juggling
+    //    if($username == 'admin' && $password == 'Password!123'){
+    //        return true;
+    //    }else{
+    //       return false;
+    //    }
         
     }
 
