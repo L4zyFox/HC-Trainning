@@ -27,8 +27,13 @@ switch($route){
             $data_obj = json_decode($request);
         //    $userLogado = $data_obj->username;
         //    echo 'Seja bem-vindo ' . $userLogado;
+            $auth = new AuthController();
             $result = $auth->login($data_obj->username, $data_obj->password);
-            echo $result;
+            if($result){
+                echo "Login realizado com sucesso!";
+            }else{
+                echo "Usuário ou Senha inválido!";
+            }
 
         }elseif($method == 'GET'){
             $controller = new ViewController();

@@ -6,7 +6,7 @@ class AuthController {
     public $username;
     public $user_id;
 
-    public function login($username, $Password){
+    public function login($username, $password){
 
         if($username == 'admin' && $password == 'Password!123'){
             return true;
