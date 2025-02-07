@@ -28,6 +28,14 @@ class User {
         return $user;
     }
 
+    public function registerUser($username, $password){
+        $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 'user')";
+        $result = $this->connection->query($sql);
+        return $result;
+    }
+
+
+
     public function __destruct(){
 
         $this->connection->close();

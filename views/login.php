@@ -8,13 +8,19 @@
 </head>
 <body>
     <div class="container">
+        <?php
+        if($_GET['msg']){
+            // Tornando vunerável a injeção de código ... XSS por exemplo!
+            echo $_GET['msg'];
+        }
+        ?><br>
         <div class="login_form">
             <h1>Página de Login!!</h1>
             <p>Insira suas credenciais!</p>
             <input id="username" name="username" type="text" placeholder="Username">
             <input id="password" name="password" type="password" placeholder="Password">
                 <button id="login-btn" type="button" onclick="fazerLogin()">Entrar</button><br><br>
-            <a href="/register">Registrar usuário</a>
+            <small>É novo por aqui?  <a href="/register">Registrar usuário!</a></small>
         </div>
     </div>
     <script src="/Assets/login.js"></script>

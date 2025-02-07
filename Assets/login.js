@@ -15,14 +15,19 @@ function fazerLogin(){
                 'Accept': 'application/json'
             },
             body: JSON.stringify(data)
-        });
-
-
-
+            // segundo then pega a promise retornada pela decode do json.
+        }).then((data)=> data.json()).then((data) => {
+            if(data.success){
+                alert(data.message)
+                document.location = "/";
+            }else{
+                alert(data.message)
+            }
+        }).catch((error)=>{
+            console.log('Deu xablau!')
+            alert('Oops, a requisição falhou!');
+        })
     }else{
         alert('Preencha todos os campos!!')
     }
-
-
-
 }
